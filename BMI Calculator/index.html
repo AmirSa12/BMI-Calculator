@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/fade727691.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!-- The layout -->
+
+    <div class="blur-result">
+        <div class="final-result-layout">
+            <div class="layout-container">
+                <span id="header-txt">Your Result</span>
+                <span id="condition"></span>
+                <span id="bmi-int" style="font-size: 82px;"></span>
+                <span id="motive-txt"></span>
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!--   End of the layout     -->
+    
+    <div class="container">
+        <div class="header">
+            <h1>BMI Calculator</h1>
+        </div>
+        <div class="gender-selection">
+            <div class="male">
+                <i class="fa-solid fa-mars fa-6x"></i>
+                <p id="male-p">Male</p>
+            </div>
+            <div class="female">
+                <i class="fa-solid fa-venus fa-6x"></i>
+                <p>Female</p>
+            </div>
+        </div>
+        <div class="height-selection">
+            <p id="height-p">Height</p>
+            <h3 id="demo"></h3>
+            <input type="range" min="150" max="220" value="50" class="slider" id="myRange">
+        </div>
+        <div class="age-weight-section">
+            <div class="weight-box">
+                <h4>Enter Weight (KG)</h4>
+                <input type="number" name="Weight" id="textarea-weight" onInput="this.value = this.value.slice(0, 3)"></textarea>
+            </div>
+            <div class="age-box">
+                <h4>Enter Age</h4>
+                <input type="number" name="Age" id="textarea-age" onInput="this.value = this.value.slice(0, 2)"></textarea>
+            </div>
+        </div>
+        <div class="submit-button">
+            <button type="submit" id="submit-button">CALCULATE YOUR BMI</button>
+        </div>
+    </div>
+</body>
+</html>

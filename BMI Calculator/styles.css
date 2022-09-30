@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    /* border: 1px red solid; */
+    background-color: #15172c;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.container{
+    /* display: flex; */
+    /* border: 1px red solid; */
+    height: 90vh;
+    width: 60vw;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #0a0c21;
+}
+
+.header{
+    /* border: 1px white solid; */
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    color: white;
+}
+
+.gender-selection{
+    /* border: 1px solid orange; */
+    height: 20vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.male{
+    background-color: #15172c;
+    /* border: 1px solid red; */
+    height: 90%;
+    width: 20%;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.female{
+    background-color: #15172c;
+    /* border: 1px solid red; */
+    height: 90%;
+    width: 20%;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    /* box-shadow: rgba(128, 128, 141, 0.2) 0px 7px 29px 0px; */
+}
+
+.female:hover,
+.male:hover{
+    cursor: pointer;
+    border: #eb1455 1px solid;
+}
+
+.selecting{
+    border: #eb1455 1px solid;
+}
+
+.height-selection{
+    /* border: 1px blue solid; */
+    height: 25vh;
+    text-align: center;
+    color: white;
+}
+
+.slider{
+    margin-top: 45px;
+    -webkit-appearance: none; 
+    width: 70%;
+    height: 10px;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 10%;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}  
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.age-weight-section{
+    /* border: 1px rgb(255, 47, 82) solid; */
+    height: 25vh;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.weight-box{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80%;
+    align-items: center;
+    border: white solid 1px;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.age-box{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80%;
+    align-items: center;
+    border: white solid 1px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* .button{
+    background-color: #15172c;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+span{
+    font-size: 22px;
+    background-color: #15172c;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+} */ /* I removedthe buttons */
+
+button{
+    display: flex;
+    background-color: #eb1455;
+    color: white;
+    height: 90px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+}
+
+button:hover{
+   background-color: #ec3b70;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+
+#textarea-weight,
+#textarea-age{
+    height: 40px;
+    width: 50px;
+    -webkit-appearance: none;
+    resize: none;
+    text-align: center;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#height-p{
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-weight: 500;
+}
+
+#male-p{
+    margin-right: 15px;
+}
+
+h3{
+    margin-top: 20px;
+}
+
+h4{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+p{
+    /* margin-right: 20px; */
+    font-size: 25px;
+}
+
+
+.blur-result{
+    /* background-image: url(./Imgs/background-2.png); */
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+    /* border: 5px purple solid; */
+}
+
+.blur-result::before{ 
+    content: '';
+    margin: auto;
+    position: absolute;
+    background: inherit;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    /* animation: make-blur 500ms forwards; */
+    z-index: 10;
+}
+
+.layout-container{
+    /* border: 1px red solid; */
+    width: 600px;
+    height: 600px;
+    background-color: #171930;
+    box-shadow: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+    z-index: 30;
+}
+
+.final-result-layout{
+    /* position: absolute; */
+    color: white;
+    font-size: 50px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#header-txt{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 5px
+}
